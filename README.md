@@ -26,7 +26,7 @@ O repositório está segmentado por Unidades Curriculares. Cada diretório raiz 
 └── UC_Templates/                # Modelos padronizados para novas disciplinas
 ```
 
-🛠️ Tecnologias e Componentes Ministrados
+## 🛠️ Tecnologias e Componentes Ministrados
 O ecossistema de desenvolvimento abordado nestes módulos foca em pilares fundamentais para o mercado de tecnologia, incluindo, mas não se limitando a:
 
 🌐 Frontend de Alta Performance: Construção de interfaces modernas e reativas utilizando React.js, JavaScript Moderno (ES6+), estruturação com HTML5 e estilização avançada com CSS3.
@@ -37,7 +37,8 @@ O ecossistema de desenvolvimento abordado nestes módulos foca em pilares fundam
 
 📊 Metodologia de Organização (Kanban de Fluxo)A gestão das aulas e o avanço cronológico dos conteúdos baseiam-se em uma metodologia ágil visual rigorosa. Isso garante previsibilidade, foco e transparência no progresso do aprendizado:
 
-⚡ Padronização de Mensagens de Commit: Para manter o histórico de evolução do repositório limpo, semântico e profissional, adota-se o padrão de mensagens baseado em tipos organizados:
+## ⚡ Padronização de Mensagens de Commit 
+Para manter o histórico de evolução do repositório limpo, semântico e profissional, adota-se o padrão de mensagens baseado em tipos organizados:
 
 TipoDescrição✨ feat(...)Introdução de um novo exemplo de código ou funcionalidade prática desenvolvida em aula.
 
@@ -60,7 +61,7 @@ Para transferir e sincronizar todos os materiais localmente na sua estação de 
 git clone [https://github.com/Lucas-C-Machado/tds-senac-sm.git](https://github.com/Lucas-C-Machado/tds-senac-sm.git)
 ```
 
-2. Sincronizar Atualizações DiáriasAntes de iniciar qualquer atividade ou aula, certifique-se de puxar as últimas atualizações do servidor remoto para manter o histórico alinhado e evitar conflitos:
+### 2. Sincronizar Atualizações DiáriasAntes de iniciar qualquer atividade ou aula, certifique-se de puxar as últimas atualizações do servidor remoto para manter o histórico alinhado e evitar conflitos:
 
 ```
 Bashgit pull origin main
@@ -74,12 +75,12 @@ Bashgit pull origin main
 Bashgit pull origin main --allow-unrelated-histories
 ```
 
-> 
-> Em seguida, abra o seu editor, resolva os marcadores de conflito se houver em algum arquivo, prepare os arquivos ajustados, realize o commit de fechamento e execute o envio definitivo:
-> ```bash
-> git add .
-> git commit -m "merge: integrando historicos remotos e locais"
-> git push -u origin main
->
+### 3. Em seguida, abra o seu editor, resolva os marcadores de conflito se houver em algum arquivo, prepare os arquivos ajustados, realize o commit de fechamento e execute o envio definitivo:
+
+```
+git add .
+git commit -m "merge: integrando historicos remotos e locais"
+git push -u origin main
+```
 
 🔬 Manual de Organização e Governança de Código Local — SENAC Santa Maria.
