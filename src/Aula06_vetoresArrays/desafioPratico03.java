@@ -170,7 +170,7 @@ public class desafioPratico03 {
                     break;
 
                 case 4:
-                    System.out.println("\nEncerrando o módulo de Controle de Estacionamento. Cancelas travadas.");
+                    System.out.println("\nEncerrando o modulo de Controle de Estacionamento. Cancelas travadas.");
                     break;
 
                 default:
