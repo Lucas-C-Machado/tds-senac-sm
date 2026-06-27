@@ -1,12 +1,9 @@
 package Aula10_funcoesMetodos;
 
 public class exercicio04 {
-    public static void consultarAluno(String nome, int matricula){
-        System.out.println("=======================");
-        System.out.println("=== CONSULTAR ALUNO ===");
-        System.out.println("=======================");
-        
-        System.out.println("O nome do aluno e: " + nome);
-        System.out.println("A matricula do aluno e: " + matricula);
+    public static void consultarAluno(String nome, String matricula) {
+        System.out.println("=== CONSULTA DE ALUNO ===");
+        System.out.println("Nome: " + nome);
+        System.out.println("Matrícula: " + matricula);
     }
 }

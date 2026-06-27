@@ -30,7 +30,7 @@ public class validacaoUsuarioeSenha {
         
         //Validação de Usuário e Senha - Simplificado
         
-        String usuario = "admin23";
+        String usuario = "admin123";
         int senha = 123;
         
         if (usuario.equals("admin123") && senha == 123){
