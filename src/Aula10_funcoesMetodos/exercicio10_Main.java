@@ -6,7 +6,7 @@ public class exercicio10_Main {
 
     static String nomeAluno = "";
     static String matriculaAluno = "";
-    static String statusMatricula = "Inválida";
+    static String statusMatricula = "Invalida";
     static int contadorAcessos = 0;
     static Scanner teclado = new Scanner(System.in);
 
@@ -21,11 +21,11 @@ public class exercicio10_Main {
             System.out.println("\n=== MENU DO SISTEMA ===");
             System.out.println("1 - Cadastrar Aluno");
             System.out.println("2 - Consultar Aluno");
-            System.out.println("3 - Validar Matrícula");
+            System.out.println("3 - Validar Matricula");
             System.out.println("4 - Liberar Entrada e Registrar Acesso");
-            System.out.println("5 - Gerar Relatório");
+            System.out.println("5 - Gerar Relatorio");
             System.out.println("0 - Encerrar Sistema");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha uma opcao: ");
             
             opcao = teclado.nextInt();
             teclado.nextLine(); 
@@ -55,7 +55,7 @@ public class exercicio10_Main {
                     System.out.println("Encerrando o sistema.");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opcao invalida!");
             }
         } while (opcao != 0);
     }
@@ -64,9 +64,9 @@ public class exercicio10_Main {
     public static void cadastrarAluno() {
         System.out.print("Digite o nome do aluno: ");
         nomeAluno = teclado.nextLine();
-        System.out.print("Digite a matrícula do aluno: ");
+        System.out.print("Digite a matricula do aluno: ");
         matriculaAluno = teclado.nextLine();
-        statusMatricula = "Não Validada";
+        statusMatricula = "Nao Validada";
         System.out.println("[Sistema] Aluno cadastrado com sucesso!");
     }
 
@@ -74,20 +74,20 @@ public class exercicio10_Main {
     public static void consultarAluno(String nome, String matricula) {
         System.out.println("\n=== CONSULTA DE ALUNO ===");
         System.out.println("Nome: " + nome);
-        System.out.println("Matrícula: " + matricula);
+        System.out.println("Matricula: " + matricula);
     }
 
     // EXERCÍCIO 05
     public static String validarMatricula(String matricula) {
         if (matricula == null || matricula.trim().isEmpty()) {
-            return "Matrícula inválida";
+            return "Matricula invalida";
         }
-        return "Válida";
+        return "Valida";
     }
 
     // EXERCÍCIO 06
     public static String liberarEntrada(String statusMatricula) {
-        if ("Válida".equalsIgnoreCase(statusMatricula)) {
+        if ("Valida".equalsIgnoreCase(statusMatricula)) {
             return "Entrada liberada";
         }
         return "Entrada negada";
@@ -100,9 +100,9 @@ public class exercicio10_Main {
 
     // EXERCÍCIO 08
     public static void exibirRelatorio(String aluno, String matricula, int quantidadeAcessos) {
-        System.out.println("\n=== RELATÓRIO DE ACESSO ===");
+        System.out.println("\n=== RELATORIO DE ACESSO ===");
         System.out.println("Aluno cadastrado: " + aluno);
-        System.out.println("Matrícula: " + matricula);
+        System.out.println("Matricula: " + matricula);
         System.out.println("Quantidade de acessos: " + quantidadeAcessos);
     }
 }

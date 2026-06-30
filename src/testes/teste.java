@@ -1,39 +1,57 @@
 package testes;
 
+import java.util.Scanner;
+
 public class teste {
     public static void main(String[] args) {
         
-        int idade = 8;
+        Scanner entrada = new Scanner(System.in);
         
-        //Primeira tentativa (se a condição for atendida, faça isso)
-        if (idade <= 4){
-            System.out.println("Sou um bebe");
-        } 
+        var login = "admin";
+        var senha = "1234";
         
-        //Segunda tentativa (caso a primeira tentativa não der certo faça isso)
-        else if (idade >= 5 && idade <= 10){
-            System.out.println("Sou uma crianca");
-        } 
+        System.out.println("=========================================");
+        System.out.println("DESAFIO 01 - SISTEMA DE LOGIN INTELIGENTE");
+        System.out.println("=========================================");
+
+        System.out.println("Digite o seu login: ");
+        var loginScanner = entrada.nextLine();
         
-        //Terceira tentativa (caso a segunda tentativa não der certo faça isso)
-        else if(idade >= 11 && idade <= 13){
-            System.out.println("Sou um pre-adolescente");
-        } 
+        System.out.println("Digite a sua senha: ");
+        var senhaScanner = entrada.nextLine();
         
-        //Quarta tentativa (caso a terceira tentativa não der certo faça isso)
-        else if(idade >= 14 && idade <= 17){
-            System.out.println("Sou um adolescente");
-        } 
-        
-        //Quinta tentativa (caso a quarta tentativa não der certo faça isso)
-        else if(idade >= 18 && idade <= 59){
-            System.out.println("Sou um adulto");
-        } 
-        
-        //Sexta e última tentativa (caso nada der certo, faça isso)
-        else {
-            System.out.println("Sou um senhor");
+        if(loginScanner.equalsIgnoreCase("admin") && senhaScanner.equals("1234")){
+            System.out.println("Bem-vindo " + login);
+        } else{
+            for(var nTentativas = 1; nTentativas <= 3; nTentativas++){
+                if (nTentativas <= 2){                    
+                    System.out.println("Login ou senha invalidos!\nTentativa atual " + nTentativas + " de 3");
+                    
+                    System.out.println("Digite o seu login: ");
+                    loginScanner = entrada.nextLine();
+                    
+                    System.out.println("Digite a sua senha: ");
+                    senhaScanner = entrada.nextLine();
+                                   
+                    if(loginScanner.equalsIgnoreCase("admin") && senhaScanner.equals("1234")){
+                        System.out.println("Bem-vindo " + login);
+                        break;
+                    }
+
+                }else if(nTentativas == 3){
+                    System.out.println("Login ou senha invalidos!\nTentativa atual " + nTentativas + " de 3");
+                    System.out.println("Cuidado! Voce esta na ultima tentativa!");
+                    
+                    System.out.println("Digite o seu login: ");
+                    loginScanner = entrada.nextLine();
+
+                    System.out.println("Digite a sua senha: ");
+                    senhaScanner = entrada.nextLine();
+                } else {
+                    System.out.println("Voce alcancou o numero maximo de tentativas, a sua conta foi bloqueada!");
+                }
+            }
         }
-        
+        entrada.close();
     }
 }
